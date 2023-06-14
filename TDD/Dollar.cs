@@ -11,5 +11,9 @@ namespace TDD
         public Dollar(int amount)
         {
         }
+
+        public void Times(int multiplier)
+        {
+        }
     }
 }
