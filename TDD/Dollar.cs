@@ -8,6 +8,7 @@ namespace TDD
 {
     public class Dollar
     {
+        int amount;
         public Dollar(int amount)
         {
         }
