@@ -7,7 +7,7 @@ namespace TestTDD
         [Fact]
         public void TestMultiplication()
         {
-            var five = new Doller(5);
+            var five = new Dollar(5);
             five.Times(2);
             Assert.Equal(10, five.amount);
         }
