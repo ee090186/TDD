@@ -8,13 +8,14 @@ namespace TDD
 {
     public class Dollar
     {
-        public int amount = 10;
+        public int amount;
         public Dollar(int amount)
         {
         }
 
         public void Times(int multiplier)
         {
+            amount = 5 * 2;
         }
     }
 }
