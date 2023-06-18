@@ -18,5 +18,11 @@ namespace TDD
         {
             return new Dollar(amount * multiplier);
         }
+
+        public Boolean Equals(object obj)
+        {
+            var dollar = (Dollar)obj;
+            return amount == dollar.amount;
+        }
     }
 }
