@@ -11,11 +11,12 @@ namespace TDD
         public int amount;
         public Dollar(int amount)
         {
+            this.amount = amount;
         }
 
-        public void Times(int multiplier)
+        public Dollar Times(int multiplier)
         {
-            amount = 5 * 2;
+            return new Dollar(amount * multiplier);
         }
     }
 }
