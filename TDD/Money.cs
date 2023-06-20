@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TDD
 {
-    internal class Money
+    public class Money
     {
     }
 }
