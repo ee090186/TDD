@@ -8,5 +8,11 @@ namespace TDD
 {
     public class Money
     {
+        protected int amount;
+        public override Boolean Equals(object obj)
+        {
+            var money = (Money)obj;
+            return amount == money.amount;
+        }
     }
 }

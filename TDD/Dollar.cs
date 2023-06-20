@@ -8,7 +8,6 @@ namespace TDD
 {
     public class Dollar : Money
     {
-        private int amount;
         public Dollar(int amount)
         {
             this.amount = amount;
@@ -19,10 +18,5 @@ namespace TDD
             return new Dollar(amount * multiplier);
         }
 
-        public override Boolean Equals(object obj)
-        {
-            var dollar = (Dollar)obj;
-            return amount == dollar.amount;
-        }
     }
 }
