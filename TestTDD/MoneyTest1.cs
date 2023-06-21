@@ -24,6 +24,8 @@ namespace TestTDD
                         new Franc(5)));
             Assert.False(new Franc(5).Equals(
                          new Franc(6)));
+            Assert.False(new Franc(5).Equals(
+                         new Dollar(5)));
         }
         [Fact]
         public void TestFrancMultiplication()
