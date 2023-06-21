@@ -18,11 +18,6 @@ namespace TDD
             return new Franc(amount * multiplier);
         }
 
-        public override Boolean Equals(object obj)
-        {
-            var franc = (Franc)obj;
-            return amount == franc.amount;
-        }
     }
 
 }
