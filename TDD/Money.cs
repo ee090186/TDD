@@ -17,6 +17,6 @@ namespace TDD
                 && GetType().Equals(money.GetType());
         }
 
-        public static Dollar Dollar(int amount) => new Dollar(amount);
+        public static Money Dollar(int amount) => new Dollar(amount);
     }
 }
