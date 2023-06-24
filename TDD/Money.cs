@@ -10,6 +10,7 @@ namespace TDD
     {
         protected int amount;
         public abstract Money Times(int multiplier);
+        public abstract string Currency();
         public override Boolean Equals(object obj)
         {
             var money = (Money)obj;

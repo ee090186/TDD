@@ -18,5 +18,7 @@ namespace TDD
             return new Dollar(amount * multiplier);
         }
 
+        public override string Currency() => "USD";
+
     }
 }

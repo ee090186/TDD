@@ -18,6 +18,8 @@ namespace TDD
             return new Franc(amount * multiplier);
         }
 
+        public override string Currency() => "CHF";
+
     }
 
 }
