@@ -9,8 +9,8 @@ namespace TDD
     abstract public class Money
     {
         protected int amount;
+        public string Currency { get; protected set; }
         public abstract Money Times(int multiplier);
-        public abstract string Currency();
         public override Boolean Equals(object obj)
         {
             var money = (Money)obj;
@@ -18,7 +18,7 @@ namespace TDD
                 && GetType().Equals(money.GetType());
         }
 
-        public static Money Dollar(int amount) => new Dollar(amount);
-        public static Money Franc(int amount) => new Franc(amount);
+        public static Money Dollar(int amount) => new Dollar(amount, "USD");
+        public static Money Franc(int amount) => new Franc(amount, "CHF");
     }
 }

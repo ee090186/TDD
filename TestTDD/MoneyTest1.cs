@@ -39,8 +39,8 @@ namespace TestTDD
         [Fact]
         public void TestCurrency()
         {
-            Assert.Equal("USD", Money.Dollar(1).Currency());
-            Assert.Equal("CHF", Money.Franc(1).Currency());
+            Assert.Equal("USD", Money.Dollar(1).Currency);
+            Assert.Equal("CHF", Money.Franc(1).Currency);
         }
     }
 }
