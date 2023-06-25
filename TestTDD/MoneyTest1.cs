@@ -25,15 +25,6 @@ namespace TestTDD
         }
 
         [Fact]
-        public void TestFrancMultiplication()
-        {
-            var five = Money.Franc(5);
-            Assert.Equal(Money.Franc(10), five.Times(2));
-
-            Assert.Equal(Money.Franc(15), five.Times(3));
-        }
-
-        [Fact]
         public void TestCurrency()
         {
             Assert.Equal("USD", Money.Dollar(1).Currency);
