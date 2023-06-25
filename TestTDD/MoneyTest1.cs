@@ -27,6 +27,12 @@ namespace TestTDD
             Assert.False(Money.Franc(5).Equals(
                          Money.Dollar(5)));
         }
+
+        [Fact]
+        public void TestDefferentClassEquality()
+        {
+            Assert.True(new Money(10,"CHF").Equals(new Franc(10,"CHF")));
+        }
         [Fact]
         public void TestFrancMultiplication()
         {

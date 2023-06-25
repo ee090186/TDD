@@ -6,19 +6,27 @@ using System.Threading.Tasks;
 
 namespace TDD
 {
-    abstract public class Money
+    public class Money
     {
         protected int amount;
         public string Currency { get; protected set; }
-        public abstract Money Times(int multiplier);
+        public Money(int amount, string currency)
+        {
+            this.amount = amount;
+            Currency = currency;
+        }
+        public Money Times(int multiplier)
+        {
+            return new Money(amount * multiplier, Currency);
+        }
         public override Boolean Equals(object obj)
         {
             var money = (Money)obj;
             return amount == money.amount 
-                && GetType().Equals(money.GetType());
+                && Currency.Equals(money.Currency);
         }
 
-        public static Money Dollar(int amount) => new Dollar(amount, "USD");
-        public static Money Franc(int amount) => new Franc(amount, "CHF");
+        public static Money Dollar(int amount) => new Money(amount, "USD");
+        public static Money Franc(int amount) => new Money(amount, "CHF");
     }
 }
