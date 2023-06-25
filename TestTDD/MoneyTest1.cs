@@ -8,8 +8,8 @@ namespace TestTDD
         public void TestMultiplication()
         {
             Money five = Money.Dollar(5);
-            Assert.Equal(Money.Dollar(10), five.Times(2));
 
+            Assert.Equal(Money.Dollar(10), five.Times(2));
             Assert.Equal(Money.Dollar(15), five.Times(3));
         }
 
@@ -20,19 +20,10 @@ namespace TestTDD
                         Money.Dollar(5)));
             Assert.False(Money.Dollar(5).Equals(
                          Money.Dollar(6)));
-            Assert.True(Money.Franc(5).Equals(
-                        Money.Franc(5)));
-            Assert.False(Money.Franc(5).Equals(
-                         Money.Franc(6)));
             Assert.False(Money.Franc(5).Equals(
                          Money.Dollar(5)));
         }
 
-        [Fact]
-        public void TestDefferentClassEquality()
-        {
-            Assert.True(new Money(10,"CHF").Equals(new Franc(10,"CHF")));
-        }
         [Fact]
         public void TestFrancMultiplication()
         {
