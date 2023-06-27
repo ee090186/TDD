@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TDD
 {
-    public class Money
+    public class Money : IExpression
     {
         protected int amount;
         public string Currency { get; protected set; }
@@ -26,7 +26,7 @@ namespace TDD
                 && Currency.Equals(money.Currency);
         }
 
-        public Money Plus(Money addend)
+        public IExpression Plus(Money addend)
         {
             return new Money(amount + addend.amount, Currency);
         }

@@ -1,3 +1,5 @@
+using System.Diagnostics;
+using System.Linq.Expressions;
 using TDD;
 
 namespace TestTDD
@@ -34,9 +36,12 @@ namespace TestTDD
         [Fact]
         public void TestSimpleAddition()
         {
-            Money sum = Money.Dollar(5).Plus(Money.Dollar(5));
+            var five = Money.Dollar(5);
+            IExpression sum = five.Plus(five);
+            Bank bank = new Bank();
+            Money reduced = bank.Reduce(sum, "USD");
 
-            Assert.Equal(Money.Dollar(10), sum);
+            Assert.Equal(Money.Dollar(10), reduced);
         }
     }
 }
