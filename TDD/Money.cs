@@ -26,6 +26,10 @@ namespace TDD
                 && Currency.Equals(money.Currency);
         }
 
+        public Money Plus(Money addend)
+        {
+            return new Money(amount + addend.amount, Currency);
+        }
         public static Money Dollar(int amount) => new Money(amount, "USD");
         public static Money Franc(int amount) => new Money(amount, "CHF");
     }
