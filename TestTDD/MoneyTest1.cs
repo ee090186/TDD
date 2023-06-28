@@ -43,5 +43,25 @@ namespace TestTDD
 
             Assert.Equal(Money.Dollar(10), reduced);
         }
+
+        [Fact]
+        public void TestPlusReturnsSum()
+        {
+            var five = Money.Dollar(5);
+            IExpression result = five.Plus(five);
+            var sum = (Sum)result;
+            Assert.Equal(five, sum.Augend);
+            Assert.Equal(five, sum.Addend);
+        }
+
+        [Fact]
+        public void TestReduceSum()
+        {
+            var sum = new Sum(Money.Dollar(3), Money.Dollar(4));
+            var bank = new Bank();
+            var result = bank.Reduce(sum, "USD");
+            Assert.Equal(Money.Dollar(7), result);
+        }
+
     }
 }

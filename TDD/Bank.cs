@@ -8,6 +8,7 @@ namespace TDD
 {
     public class Bank
     {
-        public Money Reduce(IExpression source, String to) => Money.Dollar(10);
+        public Money Reduce(IExpression source, String to)
+            => Money.Dollar(10);
     }
 }

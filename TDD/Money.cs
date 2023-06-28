@@ -28,7 +28,7 @@ namespace TDD
 
         public IExpression Plus(Money addend)
         {
-            return new Money(amount + addend.amount, Currency);
+            return new Sum(this, addend);
         }
         public static Money Dollar(int amount) => new Money(amount, "USD");
         public static Money Franc(int amount) => new Money(amount, "CHF");
