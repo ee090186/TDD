@@ -8,5 +8,6 @@ namespace TDD
 {
     public interface IExpression
     {
+        Money Reduce(string to);
     }
 }

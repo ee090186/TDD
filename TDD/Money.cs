@@ -8,7 +8,7 @@ namespace TDD
 {
     public class Money : IExpression
     {
-        protected int amount;
+        public int amount;
         public string Currency { get; protected set; }
         public Money(int amount, string currency)
         {
@@ -30,6 +30,8 @@ namespace TDD
         {
             return new Sum(this, addend);
         }
+
+        public Money Reduce(string to) => this;
         public static Money Dollar(int amount) => new Money(amount, "USD");
         public static Money Franc(int amount) => new Money(amount, "CHF");
     }

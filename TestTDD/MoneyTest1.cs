@@ -63,5 +63,12 @@ namespace TestTDD
             Assert.Equal(Money.Dollar(7), result);
         }
 
+        [Fact]
+        public void TestReduceMoney()
+        {
+            var bank = new Bank();
+            var result = bank.Reduce(Money.Dollar(1), "USD");
+            Assert.Equal(Money.Dollar(1), result);
+        }
     }
 }

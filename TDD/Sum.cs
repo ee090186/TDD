@@ -16,5 +16,11 @@ namespace TDD
             Augend = augend;
             Addend = addend;
         }
+
+        public Money Reduce(string to)
+        {
+            var amount = Augend.amount + Addend.amount;
+            return new Money(amount, to);
+        }
     }
 }
