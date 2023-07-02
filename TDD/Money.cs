@@ -31,7 +31,11 @@ namespace TDD
             return new Sum(this, addend);
         }
 
-        public Money Reduce(string to) => this;
+        public Money Reduce(Bank bank, string to)
+        {
+            int rate = bank.Rate(Currency, to);
+            return new Money(amount / rate, to);
+        }
         public static Money Dollar(int amount) => new Money(amount, "USD");
         public static Money Franc(int amount) => new Money(amount, "CHF");
     }

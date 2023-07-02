@@ -17,7 +17,7 @@ namespace TDD
             Addend = addend;
         }
 
-        public Money Reduce(string to)
+        public Money Reduce(Bank bank, string to)
         {
             var amount = Augend.amount + Addend.amount;
             return new Money(amount, to);
