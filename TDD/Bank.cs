@@ -8,18 +8,20 @@ namespace TDD
 {
     public class Bank
     {
+        private Dictionary<Pair, int> Rates = new Dictionary<Pair, int>();
         public Money Reduce(IExpression source, String to)
         {
             return source.Reduce(this, to);
         }
 
         public void AddRate(string from, string to, int rate)
-        { 
+        {
+            Rates.Add(new Pair(from, to), rate);
         }
 
         public int Rate(string from, string to)
         {
-            return (from.Equals("CHF") && to.Equals("USD")) ? 2 : 1;
+            return Rates[new Pair(from, to)];
         }
     }
 }

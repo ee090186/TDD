@@ -79,11 +79,5 @@ namespace TestTDD
             Money result = bank.Reduce(Money.Franc(2), "USD");
             Assert.Equal(Money.Dollar(1), result);
         }
-
-        [Fact]
-        public void TestArrayEquals()
-        {
-            Assert.Equal(new object[] { "abc" }, new object[] { "cbc" });
-        }
     }
 }
