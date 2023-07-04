@@ -21,6 +21,8 @@ namespace TDD
 
         public int Rate(string from, string to)
         {
+            if (from.Equals(to)) return 1;
+
             return Rates[new Pair(from, to)];
         }
     }
