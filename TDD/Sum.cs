@@ -8,8 +8,8 @@ namespace TDD
 {
     public class Sum : IExpression
     {
-        public Money Augend;
-        public Money Addend;
+        public IExpression Augend;
+        public IExpression Addend;
 
         public Sum(Money augend, Money addend)
         {
