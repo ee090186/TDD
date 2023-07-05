@@ -19,7 +19,8 @@ namespace TDD
 
         public Money Reduce(Bank bank, string to)
         {
-            var amount = Augend.amount + Addend.amount;
+            var amount = Augend.Reduce(bank, to).amount
+                       + Addend.Reduce(bank, to).amount;
             return new Money(amount, to);
         }
     }
