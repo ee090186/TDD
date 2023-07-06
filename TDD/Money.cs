@@ -15,7 +15,7 @@ namespace TDD
             this.amount = amount;
             Currency = currency;
         }
-        public Money Times(int multiplier)
+        public IExpression Times(int multiplier)
         {
             return new Money(amount * multiplier, Currency);
         }
@@ -26,7 +26,7 @@ namespace TDD
                 && Currency.Equals(money.Currency);
         }
 
-        public IExpression Plus(Money addend)
+        public IExpression Plus(IExpression addend)
         {
             return new Sum(this, addend);
         }

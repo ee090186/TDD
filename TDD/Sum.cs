@@ -23,5 +23,7 @@ namespace TDD
                        + Addend.Reduce(bank, to).amount;
             return new Money(amount, to);
         }
+
+        public IExpression Plus(IExpression addend) => null;
     }
 }
