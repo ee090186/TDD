@@ -24,6 +24,6 @@ namespace TDD
             return new Money(amount, to);
         }
 
-        public IExpression Plus(IExpression addend) => null;
+        public IExpression Plus(IExpression addend) => new Sum(this, addend);
     }
 }
